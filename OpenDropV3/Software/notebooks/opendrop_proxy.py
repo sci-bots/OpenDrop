@@ -24,7 +24,8 @@ class SerialProxy():
 
     def identify(self):
         # Return a string that uniquely identifies the OpenDrop.
-        # The string is of the form "GaudiLabs,<model>,<serial number>,<software revision>" .
+        # The string is of the form "GaudiLabs,<model>,<serial number>,
+        # <software revision>".
         self._serial.write(b"*IDN?\n")
         return self._serial.readline().strip().decode()
     
